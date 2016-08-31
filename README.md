@@ -2,6 +2,7 @@ This is a port of @mikesprague's [Vue.js todo list](https://github.com/mikesprag
 
 As this port was made with [create-react-app](https://github.com/facebookincubator/create-react-app), you can clone this repo and tinker with it yourself using the commands below.
 
+View the [demo](https://martalist.github.com/react-todos).
 
 ## Available Scripts
 
