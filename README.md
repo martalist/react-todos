@@ -1,4 +1,4 @@
-This is a port of @mikesprague's [Vue.js todo list](https://github.com/mikesprague/vuejs-projects/tree/master/todo-list) to React, purely as a exercism of comparison and interest.
+This is a port of @mikesprague's [Vue.js todo list](https://github.com/mikesprague/vuejs-projects/tree/master/todo-list) to React, purely as a exercise of comparison and interest.
 
 As this port was made with [create-react-app](https://github.com/facebookincubator/create-react-app), you can clone this repo and tinker with it yourself using the commands below.
 
