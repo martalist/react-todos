@@ -1,9 +1,10 @@
 import * as t from '../constants';
 
-export const addTodo = (text, id) => ({
+let id = 0;
+export const addTodo = (text) => ({
   type: t.ADD_TODO,
   text,
-  id
+  id: id++
 });
 
 export const deleteTodo = (id) => ({
