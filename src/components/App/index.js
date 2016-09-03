@@ -1,23 +1,7 @@
 import React, { Component } from 'react';
+import AddTodo from '../../containers/AddTodo';
+import Todo from '../Todo';
 import './index.css';
-
-const Todo = ({children, completed, toggleComplete, handleDelete}) => {
-	return (
-		<li className="list-group-item" >
-			<i 
-				onClick={toggleComplete}
-				className={completed ? 'fa fa-fw fa-2x fa-check-square-o text-success task-check' : 'fa fa-fw fa-2x fa-square-o task-check'}>
-			</i>
-			<span 
-				onClick={toggleComplete}
-				className={completed ? 'task-text task-completed text-success' : 'task-text'}>
-					{children}
-			</span>
-			<button className="btn btn-danger btn-sm pull-right" onClick={handleDelete}><i className="fa fa-2x fa-times-circle"></i></button>
-		</li>
-	);
-}
-
 
 class App extends Component {
 	constructor(props) {
@@ -32,19 +16,8 @@ class App extends Component {
           }],
 			text: ''
 		};
-		this.handleSubmit = this.handleSubmit.bind(this);
 		this.toggleComplete = this.toggleComplete.bind(this);
 		this.handleDelete = this.handleDelete.bind(this);
-	}
-
-	handleSubmit(e) {
-		e.preventDefault();
-		const todos = this.state.todos.concat([{
-			task: this.state.text, 
-			completed: false
-		}]);
-		const text = '';
-		this.setState({ todos, text	});
 	}
 
 	toggleComplete(index) {
@@ -78,13 +51,7 @@ class App extends Component {
     return (
 			<div className="row">
         <div className="col-sm-12">
-					<form onSubmit={this.handleSubmit}>
-						<input 
-							className="form-control input-lg" 
-							placeholder="What do you need to do?" 
-							value={this.state.text || ''}
-							onChange={e => this.setState({text: e.target.value})} />
-					</form>
+          <AddTodo />
           <hr />
           <ul className="list-group">
 						{todos}
