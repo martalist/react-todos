@@ -7,15 +7,20 @@ import { addTodo, toggleTodo } from './actions';
 import App from './components/App';
 import './index.css';
 
-let store = createStore(todos);
+const initialState = [
+  {
+    task: "Do something",
+    completed: false,
+    id: 0
+  },
+  {
+    task: "Do something else",
+    completed: true,
+    id: 1
+  }
+]
 
-// initial state
-(() => {
-  ["Do something", "Do something else"].forEach(task => {
-    store.dispatch(addTodo(task))
-  });
-  store.dispatch(toggleTodo(1));
-})();
+let store = createStore(todos, initialState);
 
 ReactDOM.render(
   <Provider store={store}>
