@@ -153,4 +153,47 @@ describe('todos reducer', () => {
 
   });
 
+  it('should handle CLEAR_COMPLETE', () => {
+
+    expect(
+      todos(todoList, {
+        type: 'CLEAR_COMPLETE'
+      })
+    ).toEqual([
+      {
+        task: "Second test todos",
+        completed: false,
+        id: 1
+      },
+      {
+        task: "Third test todos",
+        completed: false,
+        id: 2
+      }
+    ]);
+
+    expect(
+      todos(todoList.slice(1), {
+        type: 'CLEAR_COMPLETE'
+      })
+    ).toEqual([
+      {
+        task: "Second test todos",
+        completed: false,
+        id: 1
+      },
+      {
+        task: "Third test todos",
+        completed: false,
+        id: 2
+      }
+    ]);
+
+    expect(
+      todos(todoList.slice(0, 1), {
+        type: 'CLEAR_COMPLETE'
+      })
+    ).toEqual([]);
+
+  });
 });

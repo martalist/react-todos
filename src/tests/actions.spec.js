@@ -32,4 +32,10 @@ describe('todo actions', () => {
     });
   });
 
+  it('clearComplete should create a CLEAR_COMPLETE action', () => {
+    expect(actions.clearComplete()).toEqual({ 
+      type: 'CLEAR_COMPLETE',
+    });
+  });
+
 });

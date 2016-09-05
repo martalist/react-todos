@@ -16,3 +16,7 @@ export const toggleTodo = (id) => ({
   type: t.TOGGLE_TODO,
   id
 });
+
+export const clearComplete = () => ({
+  type: t.CLEAR_COMPLETE
+});
