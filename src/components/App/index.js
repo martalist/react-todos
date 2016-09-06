@@ -1,6 +1,7 @@
 import React from 'react';
 import AddTodo from '../../containers/AddTodo';
 import TodoListContainer from '../../containers/TodoListContainer';
+import SummaryBarContainer from '../../containers/SummaryBarContainer';
 import './index.css';
 
 const App = () => {
@@ -8,6 +9,8 @@ const App = () => {
     <div className="row">
       <div className="col-sm-12">
         <AddTodo />
+        <hr />
+        <SummaryBarContainer />
         <hr />
         <TodoListContainer />
       </div>
