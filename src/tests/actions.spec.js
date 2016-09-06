@@ -4,13 +4,13 @@ import * as actions from '../actions';
 describe('todo actions', () => {
 
   it('addTodo should create an ADD_TODO action', () => {
-    expect(actions.addTodo('Eat brussel sprouts')).toEqual({ 
+    expect(actions.addTodo('Eat brussel sprouts', 0)).toEqual({ 
       type: 'ADD_TODO',
       text: 'Eat brussel sprouts',
       id: 0
     });
 
-    expect(actions.addTodo('Eat asparagus')).toEqual({ 
+    expect(actions.addTodo('Eat asparagus', 1)).toEqual({ 
       type: 'ADD_TODO',
       text: 'Eat asparagus',
       id: 1

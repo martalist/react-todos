@@ -1,10 +1,10 @@
+import { v4 } from 'node-uuid';
 import * as t from '../constants';
 
-let id = 0;
-export const addTodo = (text) => ({
+export const addTodo = (text, id = v4()) => ({
   type: t.ADD_TODO,
   text,
-  id: id++
+  id
 });
 
 export const deleteTodo = (id) => ({
